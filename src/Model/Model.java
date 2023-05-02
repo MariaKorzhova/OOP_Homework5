@@ -19,6 +19,17 @@ public class Model implements iGetModel {
     }
     // private List<Student> students;
 
+    @Override
+    public HashMap<Long, Student> removeStudent(Long n) {
+        if (students.containsKey(n)){
+            students.remove(n);}
+        else {
+            System.out.println("Такой строки нет");
+        }
+        return students;
+        
+    }
+
     // public Model(List<Student> students) {
     //     this.students = students;
     // }

@@ -78,10 +78,8 @@ public class Controller {
                     System.out.printf("Введите номер строки, которую нужно удалить: ");
                     Long a = iScanner.nextLong();
                     // for (HashMap.Entry<Long, Student> set : students.entrySet()) {
-                    if (students.containsKey(a)){
-                        students.remove(a);
-                        }
-                        updateView();
+                    students.removeStudent(a);
+                    updateView();
                     break;
             }
 

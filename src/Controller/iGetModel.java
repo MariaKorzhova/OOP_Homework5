@@ -6,4 +6,5 @@ import Model.Student;
 
 public interface iGetModel {
     public HashMap<Long,Student> getAllStudent();
+    public HashMap<Long,Student> removeStudent(Long n);
 }
