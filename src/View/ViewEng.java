@@ -7,8 +7,9 @@ import java.lang.Iterable;
 
 import Controller.iGetView;
 import Model.Student;
-
+// Создание класса ViewEng и подключение к интерфейсу iGetView
 public class ViewEng implements iGetView {
+// Метод для вывода списка элементов в терминал на английском языке
     public void printAllStudent(HashMap<Long,Student> students)
     {
         System.out.println("-----Displaying a list of students-----");
@@ -25,7 +26,7 @@ public class ViewEng implements iGetView {
         // }
         System.out.println("-----End of list-----");
     }
-
+//  Метод для вывода подсказки
     public String prompt(String message) {
         Scanner in = new Scanner(System.in);
         System.out.print(message);

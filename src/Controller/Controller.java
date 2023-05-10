@@ -9,24 +9,24 @@ import Model.Student;
 import Model.Model;
 import View.ViewEng;
 import java.util.HashMap;
-
+// Создание класса Controller
 public class Controller {
 
     private HashMap<Long,Student> students; 
     private iGetView view;
     private iGetModel model;
-
+// Конструктор класса Controller
     public Controller(iGetView view, iGetModel model) {
         this.view = view;
         this.model = model;
         this.students = new HashMap<Long,Student>();
     } 
-
+// Метод для вызова всех элементов списка
     public void getAllStudent()
     {
         students = model.getAllStudent();
     }
-
+// Метод для определения размера списка, больше 0 или нет
     public boolean testData()
     {
         if(students.size()>0)
@@ -38,7 +38,7 @@ public class Controller {
             return false;
         }
     }
-
+// Метод для выведения списка в терминал, если список не пустой
     public void updateView()
     {
         //MVP
@@ -54,7 +54,7 @@ public class Controller {
         //MVC
         //view.printAllStudent(model.getAllStudent());
     }
-
+// Метод для вызова комманд, которые управляют списком (выход, вывод, удаление)
     public void run()
     {
         Commands com = Commands.NONE;
@@ -78,7 +78,7 @@ public class Controller {
                     System.out.printf("Введите номер строки, которую нужно удалить: ");
                     Long a = iScanner.nextLong();
                     // for (HashMap.Entry<Long, Student> set : students.entrySet()) {
-                    students.removeStudent(a);
+                    model.removeStudent(a);
                     updateView();
                     break;
             }

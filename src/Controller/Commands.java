@@ -1,5 +1,5 @@
 package Controller;
-
+// Перечисление возможных комманд
 public enum Commands {
     NONE,
     READ,
